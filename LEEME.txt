@@ -1,0 +1,3 @@
+NUEVA RESEÑA: copia plantilla.md a resenas/nombre.md, llénala, pon la portada en portadas/ y corre: python generar.py
+PUBLICAR GRATIS (GitHub Pages): sube la carpeta a un repo -> Settings > Pages > Branch main, carpeta /docs.
+Tu link: https://TUUSUARIO.github.io/NOMBRE-DEL-REPO
