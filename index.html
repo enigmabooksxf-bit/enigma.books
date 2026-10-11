@@ -1,0 +1,72 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Enigma. Reseñas</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@600&family=Outfit:wght@400;500;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2de;--bg2:#ebe5c6;--b:#0b3fc4;--b2:#1a52d9;--ind:#2a1fb8;--ink:#10153a;--m:#5d6285}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Outfit,system-ui,sans-serif}
+main{max-width:560px;margin:auto;padding:26px 18px 70px}
+.logo{display:block;margin:14px auto 4px;height:84px;width:auto}
+.wm{font:600 3rem Fredoka,sans-serif;color:var(--ind);text-align:center;line-height:1.2}
+.sub{text-align:center;font:italic 500 1.35rem 'Playfair Display',serif;color:var(--b);margin-bottom:26px}
+.tabs{display:flex;gap:10px;margin-bottom:18px}
+.tabs button{flex:1;background:none;border:2px solid var(--b);border-radius:40px;color:var(--b);font:400 1.15rem Anton,sans-serif;letter-spacing:.12em;padding:10px;cursor:pointer}
+.tabs button.on{background:var(--b);color:var(--bg)}
+input{width:100%;background:#fffdf3;border:2px solid var(--bg2);border-radius:40px;padding:14px 22px;color:var(--ink);font:1rem Outfit;margin-bottom:22px}
+input:focus,button:focus-visible,a:focus-visible,.card:focus-visible{outline:3px solid var(--ind)}
+.card{display:flex;gap:18px;background:#fffdf3;border:2px solid var(--bg2);border-radius:24px;padding:16px;margin-bottom:16px;cursor:pointer}
+.card:hover{border-color:var(--b)}
+.cvw{background:var(--b);border-radius:16px;padding:12px 10px;flex:none}
+.cv,.ph{width:84px;height:124px;border-radius:4px;object-fit:cover;display:block;box-shadow:0 8px 14px #0006;background:var(--ind);color:var(--bg);font:400 2.6rem Anton;display:grid;place-items:center}
+.card h3{margin:0;font:400 1.6rem/1.15 Anton,sans-serif;letter-spacing:.02em;color:var(--b)}.card p{margin:4px 0;color:var(--m)}
+.st{background:linear-gradient(90deg,var(--b) var(--p),#c9c3a4 var(--p));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:3px;font-size:1.2rem}
+.r{color:var(--b);font-weight:700;margin-left:10px}
+.tag{display:inline-block;background:var(--b);color:var(--bg);font-weight:500;font-size:.9rem;padding:2px 14px;border-radius:30px}
+.back{background:none;border:0;color:var(--b);font:700 1rem Outfit;cursor:pointer;padding:8px 0}
+.hero{position:relative;overflow:hidden;background:var(--b);border-radius:28px 28px 0 0;padding:34px 20px 0;text-align:center;isolation:isolate}
+.hero::before{content:"RESEÑA";position:absolute;left:0;right:0;top:-6px;z-index:-1;font:400 5.2rem/1 Anton;letter-spacing:.16em;color:var(--b2);white-space:nowrap}
+.hero .cv{width:150px;height:222px;margin:0 auto;font-size:4rem}
+.hero .wave{height:46px;background:var(--bg);border-radius:50% 50% 0 0/100% 100% 0 0;margin:-6px -20px 0}
+.det{background:#fffdf3;border:2px solid var(--bg2);border-top:0;border-radius:0 0 28px 28px;padding:6px 24px 28px}
+.det h1{font:400 2.4rem/1.1 Anton;letter-spacing:.04em;color:var(--b);text-align:center;margin:0 0 18px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px solid var(--bg2)}.row span:last-child{font-weight:700;text-align:right}
+.buy{display:block;text-align:center;background:var(--ind);border-radius:40px;padding:12px;color:var(--bg);text-decoration:none;font:400 1.1rem Anton;letter-spacing:.12em;margin-top:16px}
+.det h2{background:var(--b);color:var(--bg);border-radius:14px;padding:8px 18px;font:400 1.3rem Anton;letter-spacing:.1em;margin:30px 0 8px}
+.det h3{margin:18px 0 0;font:italic 500 1.2rem 'Playfair Display',serif;color:var(--ind)}.det p{margin:4px 0}
+blockquote{margin:8px 0;padding:8px 16px;border-left:4px solid var(--b);font:italic 500 1.1rem 'Playfair Display',serif;background:var(--bg);border-radius:0 12px 12px 0}
+.sent{display:flex;justify-content:space-around;text-align:center;margin:10px 0;color:var(--m)}.sent div{font-size:1.7rem}.sent small{display:block;font-size:.8rem}
+.punt{background:var(--bg);border-radius:14px;padding:10px 18px}
+details{background:var(--bg);border:2px dashed var(--b);border-radius:16px;padding:4px 16px 12px;margin-top:26px}summary{cursor:pointer;font:400 1.2rem Anton;letter-spacing:.08em;color:var(--b);padding:8px 0}details h2{margin-top:14px}
+.pie{text-align:center;margin-top:30px;font:600 1.6rem Fredoka;color:var(--ind)}
+.vacio{text-align:center;color:var(--m)}
+</style></head><body><main id="app"></main>
+<script>
+const D=[{"titulo": "La perla", "autor": "John Steinbeck", "anio": "1947", "reseñado": "2026-10-10", "calificacion": 3.5, "genero": "Clásico", "portada": "portadas/la_perla.jpg", "comprar": "", "sentimientos": "25=🙂, 50=😐, 75=😴, 100=🤯", "html": "<h2>Resumen</h2><p>Kino, un pescador indígena, encuentra en el fondo del mar la perla más grande del mundo. Para su familia es la fortuna de su vida y el boleto de salida a una existencia mejor. Suena a cuento de hadas, pero Steinbeck se encarga de recordarnos que los cuentos de hadas no fueron escritos para los pobres.</p><h2>Contexto</h2><p>La perla es una novela corta de John Steinbeck publicada en 1947. Está inspirada en un cuento popular mexicano que el autor conoció durante un viaje a La Paz, Baja California. Se lee en una tarde, pero deja material para pensar bastante más tiempo.</p><h2>Valoración literaria</h2><h3>Estilo</h3><p>Lo primero que te atrapa. La prosa es rápida y poética, con un toque de realismo mágico que hace que el mar se sienta vivo y la perla casi respire. Es una lectura ágil sin dejar de ser bella.</p><h3>Personajes</h3><p>Aquí es donde me costó. Los personajes son sombríos, distantes y herméticos. El autor quiere que empatices con Kino, pero al no tener de cerca sus pensamientos es difícil entrar en su mundo interior. Respeto la intención, pero no conecté con ninguno.</p><h3>Ritmo</h3><p>La primera mitad engancha. Después hay un tramo, desde la mitad hasta el penúltimo cuarto, en el que la historia pierde el hilo y la lectura se vuelve un ejercicio de paciencia.</p><h3>Twist</h3><p>Solo identifiqué uno y fue el último: llegó sin avisar y golpeó fuerte. Le da un final estupendo al libro y recupera los puntos que se perdieron en el tramo lento.</p><h3>Diálogos</h3><p>Son pocos, pero quirúrgicos. Cada uno aparece justo cuando la trama lo necesita y se equilibra muy bien con las descripciones poéticas del autor, que escribe como si usara pincel y no pluma.</p><h2>Opinión personal</h2><h3>Emoción</h3><p>Sentí impotencia. Ver cómo, justo cuando a un pobre le llega la fortuna, es cuando más piedras encuentra en el camino, cuando lo único que quiere es que las cosas cambien para toda su familia. Terminar de esa manera es simplemente triste.</p><h3>Me pego</h3><blockquote>No hay espíritu más desprendido en el mundo que el de un pobre a quien de pronto favorece la fortuna.</blockquote><h3>Enigma</h3><blockquote>¿Es un pecado que una persona pobre tenga un poco de suerte?</blockquote><h3>Recomendación</h3><p>Se lo recomiendo a quien quiera un clásico corto para pasar el rato y disfrutar de una lectura entretenida. Es imperfecto en el medio, pero tiene un final y un mensaje que se quedan.</p><details><summary>⚠️ Con spoilers · toca para abrir</summary><h2>Análisis con spoilers</h2><h3>La perla como falsa salida</h3><p>La perla promete salir de la pobreza, pero lo que hace es atraer problemas: de repente todos quieren algo de Kino. Lo que duele no es el crimen ni la pérdida, sino ver cómo el mundo entero conspira para recordarle cuál es su lugar.</p><h3>El final</h3><p>Lo que lo hace tan fuerte es que no hay premio. Kino lo pierde casi todo por querer algo mejor para los suyos, y esa idea de que la suerte, cuando le llega a un pobre, cuesta más de lo que da, es lo que te deja mirando el techo.</p></details>", "id": "la-perla", "sent": [["25", "🙂"], ["50", "😐"], ["75", "😴"], ["100", "🤯"]]}];let tab='rec',q='';const app=document.getElementById('app');
+const e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const st=n=>`<span class=st style="--p:${n/5*100}%">★★★★★</span><span class=r>${n}</span>`;
+const cv=b=>b.portada?`<img class=cv src="${e(b.portada)}" alt="Portada de ${e(b.titulo)}" onerror="this.outerHTML='<div class=\\'cv ph\\'>${e(b.titulo[0])}</div>'">`:`<div class="cv ph">${e(b.titulo[0])}</div>`;
+const logo=`<img class=logo src="portadas/logo.png" alt="Enigma." onerror="this.outerHTML='<div class=wm>Enigma.</div>'">`;
+function home(){
+  const L=D.filter(b=>(tab=='all'||b.calificacion>=4)&&(b.titulo+b.autor+b.genero).toLowerCase().includes(q.toLowerCase()));
+  app.innerHTML=`${logo}<div class=sub>Thrillers, suspenso y novelas</div>
+  <div class=tabs><button class="${tab=='rec'?'on':''}" data-t=rec>RECOMENDADOS</button><button class="${tab=='all'?'on':''}" data-t=all>RESEÑAS</button></div>
+  <input id=q placeholder="Buscar libro, autor o género" value="${e(q)}" aria-label="Buscar">
+  <div>${L.map(b=>`<div class=card tabindex=0 data-id="${e(b.id)}"><div class=cvw>${cv(b)}</div><div><h3>${e(b.titulo)}</h3><p>${e(b.autor)} • ${e(b.anio)}</p>${st(b.calificacion)}<br><span class=tag>${e(b.genero)}</span></div></div>`).join('')||'<p class=vacio>No hay reseñas con ese filtro.</p>'}</div>`;
+  app.querySelectorAll('[data-t]').forEach(x=>x.onclick=()=>{tab=x.dataset.t;home()});
+  const i=document.getElementById('q');i.oninput=()=>{q=i.value;const p=i.selectionStart;home();const n=document.getElementById('q');n.focus();n.setSelectionRange(p,p)};
+  app.querySelectorAll('.card').forEach(x=>{x.onclick=()=>location.hash=x.dataset.id;x.onkeydown=ev=>ev.key=='Enter'&&x.click()});
+}
+function det(b){
+  const f=new Date(b['reseñado']+'T00:00').toLocaleDateString('es',{day:'numeric',month:'long',year:'numeric'});
+  app.innerHTML=`<button class=back onclick="location.hash=''">← Volver</button><div class=hero>${cv(b)}<div class=wave></div></div><div class=det><h1>${e(b.titulo).toUpperCase()}</h1>
+  <div class=row><span>Autor</span><span>${e(b.autor)}</span></div><div class=row><span>Año</span><span>${e(b.anio)}</span></div>
+  <div class=row><span>Reseñado</span><span>${e(f)}</span></div><div class=row><span>Calificación</span><span>${st(b.calificacion)}</span></div>
+  <div class=row><span>Género</span><span class=tag>${e(b.genero)}</span></div>
+  ${b.comprar?`<a class=buy href="${e(b.comprar)}" target=_blank rel=noopener>COMPRAR</a>`:''}
+  ${b.html}
+  ${b.sent.length?`<h2>SENTIMIENTOS EN LA LECTURA</h2><div class=sent>${b.sent.map(s=>`<div><small>${e(s[0])}%</small>${e(s[1])}</div>`).join('')}</div>`:''}
+  <h2>PUNTUACIÓN</h2><div class=punt>${st(b.calificacion)}</div></div><div class=pie>Enigma.</div>`;
+  scrollTo(0,0);
+}
+function go(){const b=D.find(x=>x.id==location.hash.slice(1));b?det(b):home()}
+addEventListener('hashchange',go);go();
+</script></body></html>
